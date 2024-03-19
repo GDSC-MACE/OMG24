@@ -124,3 +124,25 @@
     
 })(jQuery);
 
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzP7sZ8CMHfk33_kmxcrbftFmyMiTg9GGjn2-2lr-X6LWA4o1PuWsdh8z9Sek5tmyDN/exec";
+const form = document.forms["contact-form"];
+const msg = document.getElementById("success");
+const er = document.getElementById("error");
+const load = document.getElementById("load");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      console.log("Success!", response);
+      form.style.display = "none";
+      msg.style.display = "block";
+    })
+    .catch((error) => {
+      console.error("Error!", error.message);
+      load.style.display = "none";
+      er.style.display = "block";
+    });
+});

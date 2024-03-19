@@ -884,22 +884,37 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="bg-primary rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                        <form
+                        action="https://docs.google.com/spreadsheets/d/19LQz6pCPzE-mmQrrVMupyws6EhrGSXlORgLqdngTSE4/edit#gid=0"
+                        method="post"
+                        role="form"
+                        name="contact-form"
+                        class="php-email-form"
+                        >
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control bg-light border-0" name="Name" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control bg-light border-0" name="Email" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <textarea class="form-control bg-light border-0" rows="3" name="Message" placeholder="Message"></textarea>
+                                </div>
+                                <div id="error" class="err bg-danger pt-3 text-center rounded border border-white">
+                                    <h4 class="text-white">Failed to sent Message. Try again</h4>
+                                </div>
+                                <div id="load" class="my-3">
+                                    <div class="loading">Loading</div>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-dark w-100 py-3" type="submit">Submit</button>
                                 </div>
                             </div>
                         </form>
+                    </div>
+                    <div id="success" class="success bg-success p-4 text-center rounded border border-white">
+                        <h4 class="text-white">Your message has been sent successfully</h4>
                     </div>
                 </div>
             </div>
