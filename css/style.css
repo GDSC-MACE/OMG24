@@ -496,3 +496,13 @@ h6,
         margin-bottom: -75px;
     }
 }
+
+#error{
+        display: none;
+}
+#load{
+    display: none;
+}
+#success{
+    display: none;
+}
