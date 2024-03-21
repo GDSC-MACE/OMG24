@@ -393,6 +393,50 @@ h6,
     box-shadow: 0 0 30px #DDDDDD;
 }
 
+/*** Partners***/
+
+.community-partners {
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Glowing effect */
+.card:hover {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px var(--primary), 0 0 20px var(--secondary), 0 0 30px var(--primary);
+    }
+    to {
+        box-shadow: 0 0 20px var(--secondary), 0 0 30px var(--primary), 0 0 40px var(--secondary);
+    }
+}
+@media (max-width: 768px) {
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+}
 
 /*** Team ***/
 .team-item {
